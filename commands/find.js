@@ -3,7 +3,7 @@ const play_data = require('../pdata.json');
 module.exports = {
 	name: 'find',
 	aliases: [],
-	description: 'Find information about a particular line',
+	description: 'find information about a particular line froma any play',
 	usage: '!find "[line]"',
 	execute: async(message, args, client)=>{
         if(args.length < 1){
@@ -21,7 +21,7 @@ module.exports = {
                 });
                 
                 if(lineInfo) {
-                    await message.channel.send(`Tis a line by **${lineInfo.Player}** from the play **${lineInfo.Play}** - Actscene Line **${lineInfo.ActSceneLine}**`)
+                    await message.channel.send(`Tis a spoken line by **${lineInfo.Player}** in the play **${lineInfo.Play}** - Actscene Line **${lineInfo.ActSceneLine}**`)
                 }
 
                 else {

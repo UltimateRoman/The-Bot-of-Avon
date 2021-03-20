@@ -34,11 +34,11 @@ client.on('message', message => {
 
 		for (var i = 0; i < wordList.length; i++) {
 			if (content.includes(wordList[i]) && !message.author.bot){  
-				message.channel.send("Good day, friend!");
+				message.channel.send("Good day, friend! :slight_smile:");
 				break;
 			}
 			else if (content.includes(wordList1[i]) && !message.author.bot){  
-				message.channel.send("You're welcome!");
+				message.channel.send("You're welcome! :nerd:");
 				break;
 			}
 		}

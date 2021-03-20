@@ -15,7 +15,7 @@ module.exports = {
 			message.author.send(commands_data.join(' '), { split: true });
 		}
 		else{
-			commands_data.push("✨Good Day! I'm **The Bot of Avon** Currently, I support the following commands:\n✨");
+			commands_data.push(":diamond_shape_with_a_dot_inside:  Good Day! I'm **The Bot of Avon** :star2:  \nCurrently, I support the following commands :diamond_shape_with_a_dot_inside: \n✨");
 			commands.map((command, id) => {
 				commands_data.push(` ***${command.name}***  |`);
 			})

@@ -5,7 +5,7 @@ let fl;
 module.exports = {
 	name: 'play',
 	aliases: [],
-	description: 'Start performing a particular Play',
+	description: 'start performing a particular Play',
 	usage: '!play [Name of the Play]',
 	execute: async(message, args, client)=>{
         if(args.length < 1){
@@ -33,7 +33,7 @@ module.exports = {
                 if(playLines.length != 0) {
                     console.log("Playing ", playName);
                     const picL = await Works.findOne({ where:{title: playName}});
-                    await message.channel.send("@here The Play **"+playName+"** will be starting soon...", {files: [picL.get('pic')]});
+                    await message.channel.send(":loudspeaker: @here The Play **"+playName+"** will be starting soon... :clapper:", {files: [picL.get('pic')]});
                     fl = setTimeout(async()=> {
                         playLines.forEach((line,id) => {
                             setTimeout(async() => {

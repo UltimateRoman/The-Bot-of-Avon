@@ -3,7 +3,7 @@
 module.exports = {
 	name: 'info',
 	aliases: [],
-	description: 'Find information about a particular work of Shakespeare',
+	description: 'find information about a particular work of Shakespeare',
 	usage: '!info [Name of the work]',
 	execute: async(message, args, client)=>{
         if(args.length < 1){
