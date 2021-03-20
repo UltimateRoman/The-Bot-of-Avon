@@ -29,10 +29,16 @@ client.once('ready', () => {
 client.on('message', message => {
 	if(!message.content.startsWith(prefix) || message.author.bot){ 
 		const wordList = ["Hello", "hello", "hey", "hi", "Hi", "Good Morning", "Hey"];
+		const wordList1 = ["Thank you", "Thanks", "thanks", "thank you"];
 		var content = message.content;
+
 		for (var i = 0; i < wordList.length; i++) {
 			if (content.includes(wordList[i]) && !message.author.bot){  
 				message.channel.send("Good day, friend!");
+				break;
+			}
+			else if (content.includes(wordList1[i]) && !message.author.bot){  
+				message.channel.send("You're welcome!");
 				break;
 			}
 		}
