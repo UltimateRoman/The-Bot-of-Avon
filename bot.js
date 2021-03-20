@@ -1,6 +1,8 @@
 const Discord = require('discord.js');
 const fs = require('fs');
 
+Works = require('./ckdatabase');
+
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
@@ -20,6 +22,7 @@ for (const file of commandFiles) {
 
 client.once('ready', () => {
 	console.log('The Bot of Avon is online!');
+	Works.sync();
 });
 
 

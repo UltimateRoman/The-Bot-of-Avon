@@ -1,13 +1,13 @@
-const play_data = require('../pdata.json');
+
 
 module.exports = {
 	name: 'info',
 	aliases: [],
-	description: 'Find information about a particular play or character',
-	usage: '!info [Name of the play/character]',
+	description: 'Find information about a particular work of Shakespeare',
+	usage: '!info [Name of the work]',
 	execute: async(message, args, client)=>{
         if(args.length < 1){
-			message.channel.send('Error: play/character has not been specified'); return;
+			message.channel.send('Error: the work has not been specified'); return;
         }
     }
 }

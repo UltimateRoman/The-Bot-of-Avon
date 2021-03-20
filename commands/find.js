@@ -21,7 +21,7 @@ module.exports = {
                 });
                 
                 if(lineInfo) {
-                    await message.channel.send(`This is a line by **${lineInfo.Player}** from the play **${lineInfo.Play}** - Actscene Line **${lineInfo.ActSceneLine}**`)
+                    await message.channel.send(`Tis a line by **${lineInfo.Player}** from the play **${lineInfo.Play}** - Actscene Line **${lineInfo.ActSceneLine}**`)
                 }
 
                 else {
