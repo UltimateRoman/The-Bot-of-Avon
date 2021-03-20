@@ -3,7 +3,7 @@ const play_data = require('../pdata.json');
 module.exports = {
 	name: 'play',
 	aliases: [],
-	description: 'Start playing any particular Play',
+	description: 'Start performing a particular Play',
 	usage: '!play [Name of the Play]',
 	execute: async(message, args, client)=>{
         if(args.length < 1){
@@ -14,12 +14,13 @@ module.exports = {
             try{
                 let playLines = [];
                 const playName = args.slice(0).join(' ');
-                console.log(playName);
+                console.log("Playing ", playName);
                 play_data.forEach(line => {
                     if(line.Play == playName) {
                         playLines.push(line);
                     }
                 });
+                
                 if(playLines.length != 0) {
                     await message.channel.send(`The Play **${playName}** will be starting soon...`);
                     playLines.forEach((line,id) => {
