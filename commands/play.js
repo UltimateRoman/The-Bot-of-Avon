@@ -3,8 +3,8 @@ const play_data = require('../pdata.json');
 module.exports = {
 	name: 'play',
 	aliases: [],
-	description: 'Start a particular Play',
-	usage: '!play [Play name]',
+	description: 'Start playing any particular Play',
+	usage: '!play [Name of the Play]',
 	execute: async(message, args, client)=>{
         if(args.length < 1){
 			message.channel.send('Error: play name not specified'); return;
@@ -21,7 +21,7 @@ module.exports = {
                     }
                 });
                 if(playLines.length != 0) {
-                    await message.channel.send("**Play Starting...**");
+                    await message.channel.send(`The Play **${playName}** will be starting soon...`);
                     playLines.forEach((line,id) => {
                         setTimeout(async() => {
                             if(line.ActSceneLine) {
@@ -34,7 +34,7 @@ module.exports = {
                     })
                 }
                 else {
-                    await message.channel.send("Selected Play was not found.");
+                    await message.channel.send("The selected play was not found.");
                 }
             }
             catch (e) {
