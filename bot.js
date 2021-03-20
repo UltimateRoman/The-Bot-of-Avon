@@ -24,7 +24,17 @@ client.once('ready', () => {
 
 
 client.on('message', message => {
-	if(!message.content.startsWith(prefix) || message.author.bot){ return; }
+	if(!message.content.startsWith(prefix) || message.author.bot){ 
+		const wordList = ["Hello", "hello", "Hi", "hi", "Good Morning", "hey", "Hey"];
+		var content = message.content;
+		for (var i = 0; i < wordList.length; i++) {
+			if (content.includes(wordList[i])){  
+				message.channel.send("Good day, friend!");
+				break
+			}
+		}
+		return;
+	}
 
 	const args = message.content.slice(prefix.length).trim().split(/ +/);
 	const command = args.shift().toLowerCase();

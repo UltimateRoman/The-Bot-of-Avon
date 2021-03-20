@@ -20,9 +20,9 @@ module.exports = {
                         playLines.push(line);
                     }
                 });
-                
+
                 if(playLines.length != 0) {
-                    await message.channel.send(`The Play **${playName}** will be starting soon...`);
+                    await message.channel.send(`@here The Play **${playName}** will be starting soon...`);
                     playLines.forEach((line,id) => {
                         setTimeout(async() => {
                             if(line.ActSceneLine) {
