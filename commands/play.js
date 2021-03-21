@@ -34,14 +34,15 @@ module.exports = {
                     console.log("Playing ", playName);
                     const picL = await Works.findOne({ where:{title: playName}});
                     await message.channel.send(":loudspeaker: @here The Play **"+playName+"** will be starting soon... :clapper:", {files: [picL.get('pic')]});
-                    fl = setTimeout(async()=> {
+                    
+                    setTimeout(async()=> {
                         playLines.forEach((line,id) => {
-                            setTimeout(async() => {
+                            fl = setTimeout(async() => {
                                 if(line.ActSceneLine) {
-                                    await message.channel.send(`**${line.Player}**: "${line.PlayerLine}"`)
+                                    fl[id] = await message.channel.send(`**${line.Player}**: "${line.PlayerLine}"`)
                                 }
                                 else {
-                                    await message.channel.send(`**${line.PlayerLine}**`)
+                                    fl[id] = await message.channel.send(`**${line.PlayerLine}**`)
                                 }
                             }, 2000*id);		
                         })
