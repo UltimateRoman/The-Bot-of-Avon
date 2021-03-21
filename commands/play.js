@@ -5,7 +5,7 @@ let fl;
 module.exports = {
 	name: 'play',
 	aliases: [],
-	description: 'start performing a particular Play',
+	description: 'start performing a theater particular play',
 	usage: '!play [Name of the Play]',
 	execute: async(message, args, client)=>{
         if(args.length < 1){

@@ -3,7 +3,7 @@ const play_data = require('../pdata.json');
 module.exports = {
 	name: 'find',
 	aliases: [],
-	description: 'find information about a particular line froma any play',
+	description: 'find information about a particular line from any play',
 	usage: '!find "[line]"',
 	execute: async(message, args, client)=>{
         if(args.length < 1){
