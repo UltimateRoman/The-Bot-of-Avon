@@ -1,6 +1,6 @@
 # The-Bot-of-Avon
 A Discord Bot enthusiastic about theater arts and the works of Shakespeare.
-<img width="1024" alt="Producti-Bot" src="Untitled1.jpg">
+<img width="1024" alt="Producti-Bot" src="poster.jpg">
 
 The Bot of Avon is inspired by William Shakespeare, who was also known as the Bard of Avon. We decided to build a project that could enable people to enjoy classic theater plays even in modern times and also learn more about the exemplary works of Shakespeare.
 
